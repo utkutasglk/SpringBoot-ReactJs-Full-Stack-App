@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 
 function Post() {
   const [error, setError] = useState(null);
@@ -14,6 +13,7 @@ function Post() {
           setIsLoaded(true);
           setPostList(result);
         },
+
         (error) => {
           setIsLoaded(true);
           setError(error);
@@ -22,19 +22,18 @@ function Post() {
   }, []);
 
   if (error) {
-    return <div>Error !!!</div>;
+    return <div>Error !!</div>;
   } else if (!isLoaded) {
-    return <div>Loading !!!</div>;
+    return <div>Loading !!</div>;
   } else {
-    return (
-      <ul>
-        {postList.map((post) => (
-          <li>
-            {post.title} {post.text}
-          </li>
-        ))}
-      </ul>
-    );
+    return;
+    <ul>
+      {postList.map((post) => (
+        <li>
+          {post.title} {post.text}
+        </li>
+      ))}
+    </ul>;
   }
 }
 

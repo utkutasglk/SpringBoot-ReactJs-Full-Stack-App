@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function NavBar() {
   let userId = 5;
   return (
     <div>
@@ -10,9 +10,11 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to={{ pathname: "/users" + userId }}>User</Link>
+          <Link to={{ pathname: "/users/" + userId }}>User</Link>
         </li>
       </ul>
     </div>
   );
 }
+
+export default NavBar;
