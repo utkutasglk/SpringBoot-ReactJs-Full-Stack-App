@@ -1,5 +1,5 @@
 # SpringBoot-ReactJs-Full-Stack-App Project Example
-Still going on..
+Still going on.
 
 ### Technologies
 * Spring Boot
